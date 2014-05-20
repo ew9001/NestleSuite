@@ -3,8 +3,7 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. -->
-<project basedir="." default="build" name="NestleTestRun">
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="NestleTestRun">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../Screen shots/oralb/eclipse"/>
     <property name="junit.output.dir" value="junit"/>
@@ -74,14 +73,6 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="ForgotPassword">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="ForgotPassword" todir="${junit.output.dir}"/>
-            <classpath refid="NestleTestRun.classpath"/>
-        </junit>
-    </target>
     <target name="LoginExistingUser">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
@@ -90,35 +81,11 @@
             <classpath refid="NestleTestRun.classpath"/>
         </junit>
     </target>
-    <target name="Search">
+    <target name="ForgotPassword">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="Search" todir="${junit.output.dir}"/>
-            <classpath refid="NestleTestRun.classpath"/>
-        </junit>
-    </target>
-    <target name="SavingsCalculator">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="SavingsCalculator" todir="${junit.output.dir}"/>
-            <classpath refid="NestleTestRun.classpath"/>
-        </junit>
-    </target>
-    <target name="CreateNewAccount">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="CreateNewAccount" todir="${junit.output.dir}"/>
-            <classpath refid="NestleTestRun.classpath"/>
-        </junit>
-    </target>
-    <target name="ContactForm">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="ContactForm" todir="${junit.output.dir}"/>
+            <test name="ForgotPassword" todir="${junit.output.dir}"/>
             <classpath refid="NestleTestRun.classpath"/>
         </junit>
     </target>
