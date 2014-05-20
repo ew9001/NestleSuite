@@ -51,7 +51,7 @@ public class LoginExistingUser {
     	Thread.sleep(1000);
     }
     File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-  	FileUtils.copyFile(scrFile, new File("Screenshots/" + "_" + "Successful-Login-1.png"));
+  	FileUtils.copyFile(scrFile, new File("Y://Screenshots/CoffeeMate/" + timeStamp + "/" + "Successful-Login-1.png"));
 
     // Warning: assertTextPresent may require manual changes
     assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Thank you for logging in\\.[\\s\\S]*$"));
@@ -75,7 +75,7 @@ public class LoginExistingUser {
 
     }
     File scrFile1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-  	FileUtils.copyFile(scrFile1, new File("Screenshots/" + "_" + "Successful-Logout-1.png"));
+  	FileUtils.copyFile(scrFile1, new File("Y://Screenshots/CoffeeMate/" + timeStamp + "/" + "Successful-Logout-1.png"));
     // Warning: assertTextPresent may require manual changes
     assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Already registered[\\s\\S] Sign in[\\s\\S]*$"));
   }
